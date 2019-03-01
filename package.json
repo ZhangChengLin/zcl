@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/zhangchenglin/zcl#readme",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.7.2",
     "animate.css": "^3.7.0",
     "bootstrap": "^4.3.1",
     "copy": "^0.3.2",
