@@ -1,0 +1,14 @@
+{
+    "name": "zcl/zcl",
+    "type": "project",
+    "require": {
+        "yansongda/pay": "^2.6"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "lin",
+            "email": "469946668@qq.com"
+        }
+    ]
+}

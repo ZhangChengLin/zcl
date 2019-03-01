@@ -1,0 +1,26 @@
+{
+  "name": "zcl",
+  "version": "1.0.0",
+  "description": "自留地",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangchenglin/zcl.git"
+  },
+  "author": "张成林",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhangchenglin/zcl/issues"
+  },
+  "homepage": "https://github.com/zhangchenglin/zcl#readme",
+  "devDependencies": {
+    "bootstrap": "^4.3.1",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-rename": "^1.4.0",
+    "jquery": "^3.3.1"
+  }
+}
