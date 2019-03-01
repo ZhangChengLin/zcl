@@ -19,19 +19,19 @@ global $zcl;
     <div id="pay" class="container">
         <div id="payType" class="text-center">
             <p>
-                <a href="javascript:;" id="alipay" class="btn btn-info btn-sm"><i class="fab fa-2x fa-alipay"></i>点击这里使用支付宝付款</a>
+                <a href="javascript:" id="alipay" class="btn btn-info btn-sm"><i class="fab fa-2x fa-alipay"></i>点击这里使用支付宝付款</a>
             </p>
             <p>
-                <a href="javascript:;" id="wechat" class="btn btn-success btn-sm"><i class="fab fa-2x fa-weixin"></i>点击这里使用微信付款</a>
+                <a href="javascript:" id="wechat" class="btn btn-success btn-sm"><i class="fab fa-2x fa-weixin"></i>点击这里使用微信付款</a>
             </p>
         </div>
     </div>
 
     <div class="container">
-        <div id="toast_test"></div>
         <div class="text-center">
-            <a id="toast_test_btn" class="btn btn-sm btn-dark" href="javascript:;">显示提示</a>
+            <a id="toast_test_btn" class="btn btn-sm btn-dark" href="javascript:">显示提示</a>
         </div>
+        <div id="toast_test"></div>
     </div>
 </main>
 <footer>
