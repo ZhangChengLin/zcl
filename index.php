@@ -2,7 +2,7 @@
 require_once './inc/config.php';
 global $zcl;
 ?>
-<html lang="zh_cn">
+<html lang="zh_CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
