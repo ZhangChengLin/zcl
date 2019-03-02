@@ -31,7 +31,11 @@ global $zcl;
         <div class="text-center">
             <a id="toast_test_btn" class="btn btn-sm btn-dark" href="javascript:">显示提示</a>
         </div>
-        <div id="toast_test" class="d-flex justify-content-center align-items-center"></div>
+        <div class="text-center mt-2">
+            <a href="javascript:" class="btn btn-sm btn-dark" onclick="toast('左边标题','左边内容','1','','left')">按钮-左</a>
+            <a href="javascript:" class="btn btn-sm btn-dark" onclick="toast('居中标题','居中内容','1','','center')">按钮-中</a>
+            <a href="javascript:" class="btn btn-sm btn-dark" onclick="toast('右边标题','右边内容','1','','right')">按钮-右</a>
+        </div>
     </div>
 </main>
 <footer>

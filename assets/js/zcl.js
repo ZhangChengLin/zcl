@@ -101,9 +101,8 @@ function romove_toast(id, delay) {
 }
 
 (function () {
-    let toast_test = document.querySelector("#toast_test");
     let toast_test_btn = document.querySelector("#toast_test_btn");
-    if (toast_test && toast_test_btn) {
+    if (toast_test_btn) {
         toast_test_btn.addEventListener("click", function () {
             let time = new Date();
             time = time.getFullYear() + "-" + time.getMonth() + "-" + time.getDate() + " " + time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
