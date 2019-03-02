@@ -17,7 +17,7 @@
     }
 })();
 
-function toast(title, body, time, delay) {
+function toast(title, body, time, delay, messageType) {
     let toast = document.createElement("div");
     let toast_header = document.createElement("div");
     let toast_header_strong = document.createElement("strong");
@@ -31,11 +31,26 @@ function toast(title, body, time, delay) {
     toast.id = toastID;
     toast.setAttribute("data-animation", "true");
     toast.setAttribute("data-autohide", "true");
-    delay ? toast.setAttribute("data-delay", delay) : toast.setAttribute("data-delay", 4e3);
+    delay = delay ? delay : 10e3;
+    toast.setAttribute("data-delay", delay);
+    switch (messageType) {
+        case 0:
+            toast.setAttribute("role", "status");
+            toast.setAttribute("aria-live", "polite");
+            break;
+        case 1:
+        default:
+            toast.setAttribute("role", "alert");
+            toast.setAttribute("aria-live", "assertive");
+    }
+
+    toast.setAttribute("aria-atomic", "true");
     toast_header.className = "toast_header";
     toast_header_strong.className = "mr-auto";
     toast_header_small.className = "text-muted";
     toast_header_button.className = "ml-2 mb-1 close";
+    toast_header_button.setAttribute("data-dismiss", "toast");
+    toast_header_button.setAttribute("aria-label", "Close");
     toast_header_span.setAttribute("aria-hidden", "true");
     toast_header_span.innerHTML = "&times;";
     toast_header_strong.innerHTML = title ? title : "空白的标题";
@@ -51,15 +66,15 @@ function toast(title, body, time, delay) {
     toast.appendChild(toast_header);
     toast.appendChild(toast_body);
     toast_test.appendChild(toast);
-    $(".toast").toast("show");
-    dispose_toast(toastID);
+    $("#" + toastID).toast("show");
+    dispose_toast(toastID, delay);
 }
 
-function dispose_toast(id) {
+function dispose_toast(id, delay) {
     let toast = document.querySelector("#" + id);
     setTimeout(function () {
         toast.parentElement.removeChild(toast);
-    }, 6000)
+    }, delay + 2000)
 }
 
 (function () {
@@ -70,7 +85,6 @@ function dispose_toast(id) {
             let time = new Date();
             time = time.getFullYear() + "-" + time.getMonth() + "-" + time.getDate() + " " + time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
             toast("这是标题", "这是内容。", time);
-
         })
     } else {
         alert("出错");
