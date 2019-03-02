@@ -31,7 +31,7 @@ global $zcl;
         <div class="text-center">
             <a id="toast_test_btn" class="btn btn-sm btn-dark" href="javascript:">显示提示</a>
         </div>
-        <div id="toast_test"></div>
+        <div id="toast_test" class="d-flex justify-content-center align-items-center"></div>
     </div>
 </main>
 <footer>

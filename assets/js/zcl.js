@@ -17,7 +17,9 @@
     }
 })();
 
-function toast(title, body, time, delay, messageType) {
+function toast(title, body, time, delay, position, messageType) {
+    let document_body = document.querySelector("body");
+    let toast_area = document.createElement("div");
     let toast = document.createElement("div");
     let toast_header = document.createElement("div");
     let toast_header_strong = document.createElement("strong");
@@ -25,8 +27,22 @@ function toast(title, body, time, delay, messageType) {
     let toast_header_button = document.createElement("button");
     let toast_header_span = document.createElement("span");
     let toast_body = document.createElement("div");
-    let toast_test = document.querySelector("#toast_test");
-    let toastID = "toast_" + new Date().getTime();
+    let Time = new Date().getTime();
+    let toastID = "toast_" + Time;
+    let toast_area_ID = "toast_area_" + Time;
+
+    switch (position) {
+        case "left":
+            toast_area.className = "mb-1 d-flex justify-content-start align-items-center";
+            break;
+        case "right":
+            toast_area.className = "mb-1 d-flex justify-content-end align-items-center";
+            break;
+        case "center":
+        default:
+            toast_area.className = "mb-1 d-flex justify-content-center align-items-center";
+    }
+    toast_area.id = toast_area_ID;
     toast.className = "toast";
     toast.id = toastID;
     toast.setAttribute("data-animation", "true");
@@ -58,19 +74,26 @@ function toast(title, body, time, delay, messageType) {
     toast_header_button.appendChild(toast_header_span);
     toast_header.appendChild(toast_header_strong);
     toast_header.appendChild(toast_header_small);
-
     toast_header.appendChild(toast_header_button);
     toast_body.className = "toast-body";
-
     toast_body.innerHTML = body ? body : "空白的内容";
     toast.appendChild(toast_header);
     toast.appendChild(toast_body);
-    toast_test.appendChild(toast);
+    toast_area.appendChild(toast);
+    document_body.appendChild(toast_area);
     $("#" + toastID).toast("show");
-    dispose_toast(toastID, delay);
+    romove_toast(toastID, delay);
+    remove_toast_area(toast_area_ID, delay);
 }
 
-function dispose_toast(id, delay) {
+function remove_toast_area(id, delay) {
+    let toast_area = document.querySelector("#" + id);
+    setTimeout(function () {
+        toast_area.parentElement.removeChild(toast_area);
+    }, delay + 2000)
+}
+
+function romove_toast(id, delay) {
     let toast = document.querySelector("#" + id);
     setTimeout(function () {
         toast.parentElement.removeChild(toast);
@@ -84,7 +107,7 @@ function dispose_toast(id, delay) {
         toast_test_btn.addEventListener("click", function () {
             let time = new Date();
             time = time.getFullYear() + "-" + time.getMonth() + "-" + time.getDate() + " " + time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
-            toast("这是标题", "这是内容。", time);
+            toast("这是标题", "这是内容。", time, 10e3, "left");
         })
     } else {
         alert("出错");
