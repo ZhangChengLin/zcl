@@ -18,6 +18,9 @@
 })();
 
 function toast(title, body, time, delay, position, messageType) {
+    let Time = new Date().getTime();
+    let toastID = "toast_" + Time;
+    let toast_area_ID = "toast_area_" + Time;
     let document_body = document.querySelector("body");
     let toast_area = document.createElement("div");
     let toast = document.createElement("div");
@@ -27,9 +30,6 @@ function toast(title, body, time, delay, position, messageType) {
     let toast_header_button = document.createElement("button");
     let toast_header_span = document.createElement("span");
     let toast_body = document.createElement("div");
-    let Time = new Date().getTime();
-    let toastID = "toast_" + Time;
-    let toast_area_ID = "toast_area_" + Time;
 
     switch (position) {
         case "left":
