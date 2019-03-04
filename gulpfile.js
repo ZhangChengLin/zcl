@@ -21,7 +21,7 @@ const fontawesome_webfonts_path = './node_modules/@fortawesome/fontawesome-free/
 const zcl_js_path = './assets/js/zcl.js';
 const zcl_css_path = './assets/css/zcl.css';
 
-//Task
+//default Task
 gulp.task('copy_static_js', copy_static_js);
 gulp.task('copy_static_css', copy_static_css);
 gulp.task('copy_static_font', copy_static_font);

@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .p-absolute{ position:absolute; }
 .p-fixed{ position:fixed; }
 .p-inherit{ position:inherit; }
