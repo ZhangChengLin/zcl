@@ -1,7 +1,7 @@
 {
   "name": "zcl",
   "version": "1.0.0",
-  "description": "自留地",
+  "description": "张成林的自留地",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -26,7 +26,8 @@
     "gulp": "^4.0.0",
     "gulp-imagemin": "^5.0.3",
     "gulp-rename": "^1.4.0",
-    "gulp-uglify": "^3.0.1",
+    "gulp-terser": "^1.1.7",
+    "gulp-uglifycss": "^1.1.0",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.7"
   }
