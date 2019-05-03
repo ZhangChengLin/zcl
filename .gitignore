@@ -3,6 +3,6 @@
 .idea
 
 #assets
-/assets/css/
-/assets/js/
-/assets/fonts/
+/assets/css/*.css
+/assets/js/*.js
+/assets/fonts/*/*.*
