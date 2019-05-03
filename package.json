@@ -4,7 +4,8 @@
   "description": "张成林的自留地",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-assets": "gulp copy_static_js copy_static_css copy_static_font"
   },
   "repository": {
     "type": "git",
@@ -17,18 +18,18 @@
   },
   "homepage": "https://github.com/zhangchenglin/zcl#readme",
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.7.2",
+    "@fortawesome/fontawesome-free": "^5.8.1",
     "animate.css": "^3.7.0",
     "bootstrap": "^4.3.1",
     "copy": "^0.3.2",
-    "dayjs": "^1.8.8",
-    "del": "^3.0.0",
-    "gulp": "^4.0.0",
+    "dayjs": "^1.8.13",
+    "del": "^4.1.1",
+    "gulp": "^4.0.1",
     "gulp-imagemin": "^5.0.3",
     "gulp-rename": "^1.4.0",
     "gulp-terser": "^1.1.7",
     "gulp-uglifycss": "^1.1.0",
-    "jquery": "^3.4.0",
-    "popper.js": "^1.14.7"
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
   }
 }

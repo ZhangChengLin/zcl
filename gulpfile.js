@@ -18,8 +18,8 @@ const fontawesome_sprites_path = './node_modules/@fortawesome/fontawesome-free/s
 const fontawesome_webfonts_path = './node_modules/@fortawesome/fontawesome-free/webfonts/*';
 
 //
-const zcl_js_path = './assets/js/zcl.js';
-const zcl_css_path = './assets/css/zcl.css';
+const zcl_js_path = './assets/zcl/zcl.js';
+const zcl_css_path = './assets/zcl/zcl.css';
 
 //default Task
 gulp.task('copy_static_js', copy_static_js);
@@ -33,7 +33,7 @@ function zcl_min_js(done) {
     gulp.src([zcl_js_path])
         .pipe(terser())
         .pipe(rename('zcl.min.js'))
-        .pipe(gulp.dest('./assets/js/'));
+        .pipe(gulp.dest('./assets/zcl/'));
     done();
 }
 
@@ -41,7 +41,7 @@ function zcl_min_css(done) {
     gulp.src([zcl_css_path])
         .pipe(minifycss())
         .pipe(rename('zcl.min.css'))
-        .pipe(gulp.dest('./assets/css'));
+        .pipe(gulp.dest('./assets/zcl'));
     done();
 }
 
