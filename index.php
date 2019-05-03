@@ -9,7 +9,7 @@ global $zcl;
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/fonts/css/all.min.css">
-    <link rel="stylesheet" href="./assets/css/zcl.min.css">
+    <link rel="stylesheet" href="./assets/zcl/zcl.min.css">
     <title><?php echo $zcl['site_title'] ?></title>
 </head>
 <body>
@@ -48,6 +48,6 @@ global $zcl;
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/zcl.min.js"></script>
+<script src="assets/zcl/zcl.min.js"></script>
 </body>
 </html>

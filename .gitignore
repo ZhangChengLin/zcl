@@ -2,3 +2,7 @@
 /vendor/
 .idea
 
+#assets
+/assets/css/
+/assets/js/
+/assets/fonts/

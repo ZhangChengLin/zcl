@@ -2,6 +2,7 @@
     "name": "zcl/zcl",
     "type": "project",
     "require": {
+        "php": ">=7.3.0",
         "yansongda/pay": "^2.6"
     },
     "license": "MIT",
